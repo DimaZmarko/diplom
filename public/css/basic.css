@@ -1,0 +1,172 @@
+/* helping adds*/
+.clear {
+  clear: both;
+  font-size: 1px;
+  line-height: 1px;
+  height: 0;
+  overflow: hidden; }
+
+.cfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  font-size: 1px;
+  line-height: 1px;
+  overflow: hidden;
+  clear: both; }
+
+.juster {
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  overflow: hidden; }
+
+.jfix-after:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  overflow: hidden; }
+
+.vfix {
+  height: 100%;
+  width: 0px;
+  display: inline-block;
+  vertical-align: middle; }
+
+.vfix-before:before {
+  content: '';
+  height: 100%;
+  width: 0;
+  display: inline-block;
+  vertical-align: middle; }
+
+.hidden-block {
+  position: absolute;
+  left: -99999em;
+  top: -99999em; }
+
+/* /helping adds*/
+/* ctext*/
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* /ctext */
+/* base styles*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none; }
+
+*, body, html {
+  -webkit-text-size-adjust: none;
+  -webkit-appearance: none;
+  max-height: 9001em; }
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 100%; }
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; }
+
+html {
+  height: 100%;
+  width: 100%;
+  max-width: 100%; }
+
+body {
+  min-height: 100%;
+  width: 100%;
+  min-width: 320px;
+  font-family: arial,sans-serif;
+  background: #FCFCFC;
+  color: #3d3d3d;
+  /*position: relative;*/
+  font-size: 16px;
+  line-height: 1;
+  overflow-x: hidden; }
+
+body[dir=rtl] {
+  direction: rtl; }
+  body[dir=rtl] > * {
+    direction: rtl; }
+
+img {
+  vertical-align: bottom;
+  border: 0;
+  max-width: 100%; }
+
+/* /base styles */
+/* wraps styling*/
+.mbox {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1; }
+
+/* /wraps styling*/
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: inherit; }
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: inherit;
+  opacity: 1; }
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: inherit;
+  opacity: 1; }
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: inherit; }
+
+/*End Layout*/
+/*fonts*/
+@font-face {
+  font-family: "AlmoniDLAAA";
+  src: url("../fonts/almonidlaaa400.eot");
+  src: url("../fonts/almonidlaaa400.eot?#iefix") format("embedded-opentype"), url("../fonts/almonidlaaa400.woff") format("woff"), url("../fonts/almonidlaaa400.ttf") format("truetype"), url("../fonts/almonidlaaa400.svg#AlmoniDLAAA") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "AlmoniDLAAA";
+  src: url("../fonts/almonidlaaa700.eot");
+  src: url("../fonts/almonidlaaa700.eot?#iefix") format("embedded-opentype"), url("../fonts/almonidlaaa700.woff") format("woff"), url("../fonts/almonidlaaa700.ttf") format("truetype"), url("../fonts/almonidlaaa700.svg#AlmoniDLAAA") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "AlmoniDLAAA";
+  src: url("../fonts/almonidlaaa900.eot");
+  src: url("../fonts/almonidlaaa900.eot?#iefix") format("embedded-opentype"), url("../fonts/almonidlaaa900.woff") format("woff"), url("../fonts/almonidlaaa900.ttf") format("truetype"), url("../fonts/almonidlaaa900.svg#AlmoniDLAAA") format("svg");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: "AlmoniTzarAAA";
+  src: url("../fonts/almonitzaraaa300.eot");
+  src: url("../fonts/almonitzaraaa300.eot?#iefix") format("embedded-opentype"), url("../fonts/almonitzaraaa300.woff") format("woff"), url("../fonts/almonitzaraaa300.ttf") format("truetype"), url("../fonts/almonitzaraaa300.svg#AlmoniTzarAAA") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "AlmoniTzarAAA";
+  src: url("../fonts/almonitzaraaa400.eot");
+  src: url("../fonts/almonitzaraaa400.eot?#iefix") format("embedded-opentype"), url("../fonts/almonitzaraaa400.woff") format("woff"), url("../fonts/almonitzaraaa400.ttf") format("truetype"), url("../fonts/almonitzaraaa400.svg#AlmoniTzarAAA") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+/*/fonts*/
