@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i"
           rel="stylesheet">
+    <link rel="icon" href="{{asset('images/favico.png')}}">
 
     <!--[if lt IE 10]>
     <link rel="stylesheet" href="https://rawgit.com/codefucker/finalReject/master/reject/reject.css" media="all"/>
@@ -30,7 +31,7 @@
     <link rel="stylesheet" href="{{asset('css/new_admin.css')}}">
     <link rel="stylesheet" href="{{asset('css/select2.min.css')}}">
 </head>
-<body>
+<body dir="ltr">
 <div id="p_prldr" style="z-index: 999999999">
     <div class="contpre">
         <span class="svg_anm"></span>
@@ -49,8 +50,7 @@
                 <div class="navigate-part">
                     <nav>
                         <ul>
-                            <li>About</li>
-                            <li>Main page</li>
+                            <li><a href="{{route('mainPage')}}">Main page</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -60,22 +60,25 @@
                     </a>
                 </div>
                 <div class='header_log_btn'>
-                    <a data-fancybox data-src="#create-new" href="javascript:;" class="contact_btn_header">
+                    <a data-fancybox data-src="#create-new" href="javascript:" class="contact_btn_header">
                         <span> Contact </span>
                     </a>
-
-
-                    <a href="#" class="add-butt">
-                        <span>Log out</span>
-                    </a>
-
-                    <a href="#" class="add-butt" style="display: none">
-                        <span> My account</span>
-                    </a>
-
-                    <a data-fancybox data-src="#login-form" href="javascript:;" class="add-butt">
-                        <span>Log in</span>
-                    </a>
+                    @if (Auth::guest())
+                        <a href="{{route('login')}}" class="add-butt">
+                            <span>Log in</span>
+                        </a>
+                    @else
+                        <a href="{{route('logout')}}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();" class="add-butt">
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                            <span>Log out</span>
+                        </a>
+                        <a href="{{route('admin')}}" class="add-butt">
+                            <span>Dashboard</span>
+                        </a>
+                    @endif
                 </div>
 
                 <div class="heder_ico" id="header_ico" onclick="this.classList.toggle('active_mnu');"
@@ -102,18 +105,71 @@
 </div>
 @yield('content')
 
-<?php
-//    $blog_url= get_bloginfo( 'template_directory' );
-?>
+<div class="hidden-block">
+    <div id="call_success">
+        <div class="call-success">
+            <h3>ty massage</h3>
+        </div>
+    </div>
 
+    <div id="create-new" class="popup-single">
+        <div class="contein">
+            <div class="title-row">
+                <h3>צור איתנו קשר</h3>
+                <p>אתה מוזמן לפנות אלינו ונציגינו יצרו עימך קשר בהקדם</p>
+            </div>
+            <form action="/wp-admin/admin-ajax.php">
+                <input type="hidden" name="action" value="popup_new_project">
+                <div class="inputer">
+                    <input type="text" name="name" placeholder="שם מלא (לקבלה)" required="required">
+                </div>
+                <div class="inputer">
+                    <input type="tel" name="tel" placeholder="טלפון" required="required">
+                </div>
+                <div class="inputer">
+                    <input type="email" name="email" placeholder="דואר אלקטרוני" required="required">
+                </div>
+                <div class="inputer">
+                    <textarea name="text" placeholder="הודעה"></textarea>
+                </div>
+                <div class="submiter">
+                    <button type="submit">
+                        <span>שלח פרטים</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 
-<?php
-//    get_template_part( 'parts/hidden', 'block' );
-?>
+    <div id="login-form" class="popup-single">
+        <div class="contein">
+            <div class="title-row">
+                <h3>Log in or Sing up</h3>
+                <p>אתה מוזמן לפנות אלינו ונציגינו יצרו עימך קשר בהקדם</p>
+            </div>
+            <form action="/wp-admin/admin-ajax.php">
+                <input type="hidden" name="action" value="custom_login">
+                <div class="inputer">
+                    <input type="text" name="login" placeholder="Username or Email" required="required">
+                </div>
+                <div class="inputer">
+                    <input type="password" name="password" placeholder="Password" required="required">
+                </div>
+                <div class="submiter">
+                    <button type="submit">
+                        <span>Log in</span>
+                    </button>
+                    <div class="reg-part">
+                        <a href="#"><span>Registration</span></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="popup_donors">
-
 
     </div>
     <div class="mbox">
@@ -146,7 +202,6 @@
                     </div>
                 </div>
                 <div class="col">
-
                     <div class="after-button">
                         <a data-fancybox data-src="#create-new" href="javascript:;" class="add-butt">
                             <span>
@@ -165,13 +220,12 @@
                     </div>
                 </div>
 
-
             </div>
         </div>
         <div class="botter">
             <div class="siders">
-                <div class="copiright">
-                    Copyright row
+                <div class="copyright">
+                    2020
                 </div>
                 <a href="https://www.linkedin.com/in/dymytrii-zmarko-3662a5140/" target="_blank" class="creators">
                     Created by Dymytrii Zmarko </a>
@@ -192,7 +246,6 @@
     <script src="{{asset('js/develop/custom.js')}}"></script>
     <script src="{{asset('js/develop/main.js')}}"></script>
     <script src="{{asset('js/develop/new_app.js')}}"></script>
-
 </footer>
 </body>
 </html>

@@ -648,7 +648,6 @@ body[dir=ltr] .labled, body[dir=ltr] input, body[dir=ltr] textarea {
     justify-content: center;
 }
 .verifiend p {
-    margin-top: 12px;
     padding: 0px 10px;
     color: #4E901E;
 }

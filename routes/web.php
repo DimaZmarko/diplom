@@ -11,10 +11,8 @@
 |
 */
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
-
 Route::get('/', 'MainPageController@index')->name('mainPage');
+Route::get('/project', 'ProjectController@index')->name('project');
 
 Auth::routes();
 
