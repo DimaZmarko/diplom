@@ -1190,7 +1190,7 @@ body[dir=ltr] .radio .wrappe_paypal label:before {
     /*left: -26px;*/
 }
 .radio .wrappe_paypal label:before {
-    background: url("/wp-content/uploads/2019/03/paypal-black.png");
+    background: url("../images/paypal-black.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1201,7 +1201,7 @@ body[dir=ltr] .radio .wrappe_paypal label:before {
     border-radius: none;
 }
 .radio .wrappe_paypal input[type=radio]:checked + label:before {
-    background: url("/wp-content/uploads/2019/03/paypal-784404_960_720.png");
+    background: url("../images/paypal-784404_960_720.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1228,7 +1228,7 @@ body[dir=ltr] .radio .wrapper_cart label:before {
     /*left: -26px;*/
 }
 .radio .wrapper_cart label:before {
-    background: url("/wp-content/uploads/2019/03/cart_black.png");
+    background: url("../images/cart_black.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1238,7 +1238,7 @@ body[dir=ltr] .radio .wrapper_cart label:before {
     background-color: transparent;
 }
 .radio .wrapper_cart input[type=radio]:checked + label:before {
-    background: url("/wp-content/uploads/2019/03/visa_PNG39.png");
+    background: url("../images/visa_PNG39.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1267,7 +1267,7 @@ body[dir=ltr] .radio .wrapper_bank label:before {
     left: -8px;
 }
 .radio .wrapper_bank label:before {
-    background: url("/wp-content/uploads/2019/03/cart_black_1-copy.png");
+    background: url("../images/cart_black_1-copy.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1277,7 +1277,7 @@ body[dir=ltr] .radio .wrapper_bank label:before {
     background-color: transparent;
 }
 .radio .wrapper_bank input[type=radio]:checked + label:before {
-    background: url("/wp-content/uploads/2019/03/cart_black-copy.png");
+    background: url("../images/cart_black-copy.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

@@ -13,6 +13,7 @@
 
 Route::get('/', 'MainPageController@index')->name('mainPage');
 Route::get('/project', 'ProjectController@index')->name('project');
+Route::get('/pay', 'DonationController@index')->name('pay');
 
 Auth::routes();
 
