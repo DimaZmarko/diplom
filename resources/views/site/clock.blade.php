@@ -165,21 +165,21 @@
 <div class="uppered-content">
     <div class="top-days">
         <div class="count"> 0 </div>
-        <div class="text"> day </div>
+        <div class="text">днів</div>
     </div>
     <div class="bottom-count">
         <div class="timer-count">
             <div class="item s">
                 <div class="number">0</div>
-                <div class="text"> sec </div>
+                <div class="text">сек</div>
             </div>
             <div class="item m">
                 <div class="number">0</div>
-                <div class="text"> min </div>
+                <div class="text">хв</div>
             </div>
             <div class="item h">
                 <div class="number">0</div>
-                <div class="text">hours</div>
+                <div class="text">год</div>
             </div>
         </div>
     </div>

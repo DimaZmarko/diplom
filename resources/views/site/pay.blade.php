@@ -2,27 +2,27 @@
 
 @section('content')
     <section>
-        <form action="/wp-admin/admin-ajax.php" class="former">
+        <form action="{{route('pay', ['project' => $project->id])}}" class="former" method="post">
             <input type="hidden" name="post_id" value="1">
             <div class="container">
                 <div class="row justify-content-center">
 
                     <div class="col-md-8">
                         <div class="text_header_block">
-                            <p>Project title</p>
+                            <p>{{$project->title}}</p>
                         </div>
 
                         <div class="titel-part">
-                            <h2>Place your Payment</h2>
+                            <h2>Ваш платіж</h2>
                         </div>
                         <div class="money-block">
                             <div class="add-sum-block">
                                 <div class="topper">
-                                    <p>Write the sum you want to share</p>
+                                    <p>Введіть суму котру готові пожертвувати</p>
                                 </div>
                                 <div class="selectet_input currency_select rover">
                                     <input type="number" name="paid_amount" required
-                                           min="0" id="summ" value="">
+                                           min="0" id="summ" value="{{$customAmount}}">
 
                                     <select class="js-example-basic-single" name="currency">
                                         <option value="usd" selected>$</option>
@@ -34,68 +34,68 @@
                             <div class="body-part">
                                 <div class="rover">
                                     <div class="labled">
-                                        First name
+                                        Ім'я
                                     </div>
                                     <div class="inputer required-inp copy_input">
                                         <input type="text" name="first_name" required="required"
-                                               placeholder="First name">
+                                               placeholder="Ім'я">
                                     </div>
-                                    <div class="error-text"><p>Please enter a first name</p></div>
+                                    <div class="error-text"><p>Введіть ваше ім'я</p></div>
                                 </div>
                                 <div class="rover">
                                     <div class="labled">
-                                        Last name
+                                       Прізвище
                                     </div>
                                     <div class="inputer target_input">
-                                        <input type="text" name="last_name" required="required" placeholder="Last name">
+                                        <input type="text" name="last_name" required="required" placeholder="Прізвище">
                                     </div>
-                                    <div class="error-text"><p>Please enter a last name</p></div>
+                                    <div class="error-text"><p>Введіть ваше прізвище</p></div>
                                 </div>
                                 <div class="rover">
                                     <div class="labled">
-                                        Email (for receipt)
+                                        Емейл (для чеку)
                                     </div>
                                     <div class="inputer required-inp">
-                                        <input type="email" name="email" required="required" placeholder="Email">
+                                        <input type="email" name="email" required="required" placeholder="Емейл">
                                     </div>
                                     <div class="error-text">
                                         <p>
-                                            Please enter a valid email address
+                                            Введіть валідний емейл
                                         </p>
                                     </div>
                                 </div>
                                 <div class="rover">
                                     <div class="labled">
-                                        Comment (optional)
+                                        Комент (необов'язково)
                                     </div>
                                     <div class="inputer">
                                         <textarea name="payer_comment" class="textarea_lich" maxlength="75"
-                                                  placeholder="Comment (optional)"></textarea>
+                                                  placeholder="Комент (необов'язково)"></textarea>
                                     </div>
                                     <div class="sub-text">
-                                        75 characters left
+                                        75 символів залишилось
                                     </div>
                                 </div>
                                 <div class="rover">
                                     <div class="labled">
-                                        Phone
+                                        Телефон
                                     </div>
                                     <div class="inputer">
-                                        <input type="tel" name="payer_phone" required="required" placeholder="Phone">
+                                        <input type="tel" name="payer_phone" required="required" placeholder="Телефон">
                                     </div>
                                     <div class="error-text">
                                         <p>
-                                            Please enter a phone number
+                                            Введіть свій номер телефону
                                         </p>
                                     </div>
                                 </div>
 
                                 <div class="radio_append">
                                     <div class="radio">
-                                        <div class="labled payment-type-label">Choose payment type</div>
+                                        <div class="labled payment-type-label">Виберіть спосіб оплати</div>
 
                                         <div class="wrappe_paypal">
-                                            <input type="radio" id="paypal" name="type_pay" value="paypal">
+                                            <input type="radio" id="paypal" name="type_pay" value="paypal" checked>
                                             <label for="paypal"></label>
                                         </div>
 
@@ -112,14 +112,14 @@
                                             <span class="beutify"></span>
                                             <a href="#" target="_blank">
                                         <span class="texter">
-                                            I agree to the Terms of Use and Site Privacy Policy
+                                            Я погоджусь з правилами та умовами сайту
                                         </span>
                                             </a>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="submiter">
-                                    <button type="submit">Submit Payment</button>
+                                    <button type="submit">Підтвердити платіж</button>
                                 </div>
                             </div>
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Project;
 use Illuminate\Http\Request;
 
 class MainPageController extends Controller
@@ -23,6 +24,6 @@ class MainPageController extends Controller
      */
     public function index()
     {
-        return view('site.mainPage');
+        return view('site.mainPage', ['projects' => Project::with('donations')->get()]);
     }
 }

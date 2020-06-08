@@ -50,7 +50,7 @@
                 <div class="navigate-part">
                     <nav>
                         <ul>
-                            <li><a href="{{route('mainPage')}}">Main page</a></li>
+                            <li><a href="{{route('mainPage')}}">Головна</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -61,11 +61,11 @@
                 </div>
                 <div class='header_log_btn'>
                     <a data-fancybox data-src="#create-new" href="javascript:" class="contact_btn_header">
-                        <span> Contact </span>
+                        <span> Контакт </span>
                     </a>
                     @if (Auth::guest())
                         <a href="{{route('login')}}" class="add-butt">
-                            <span>Log in</span>
+                            <span>Увійти</span>
                         </a>
                     @else
                         <a href="{{route('logout')}}" onclick="event.preventDefault();
@@ -73,10 +73,10 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 {{ csrf_field() }}
                             </form>
-                            <span>Log out</span>
+                            <span>Вийти</span>
                         </a>
                         <a href="{{route('admin')}}" class="add-butt">
-                            <span>Dashboard</span>
+                            <span>Адмінпанель</span>
                         </a>
                     @endif
                 </div>

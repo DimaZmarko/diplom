@@ -117,7 +117,7 @@ $(document).on('keyup', '.textarea_lich', function () {
     const len = $(this).val().length;
     let max = 75;
     max -= len;
-    $('.sub-text').html(max + '  ' + 'characters left');
+    $('.sub-text').html(max + '  ' + 'символів залишилось');
 });
 
 $('.input_block .view_group span').on('click', function (e) {
